@@ -25,42 +25,149 @@ navItemTablet.forEach((item) => {
   });
 });
 
+//------------------------//
 
 
+// Slider//
 
-/* этот код помечает картинки, для удобства разработки */
-let i = 1;
-for (let iw of document.querySelectorAll('.image-wrapper')) {
-  iw.style.position = 'relative';
-  iw.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-  i++;
+const sliderLine = document.querySelector('.slider-line');
+const prevButton = document.querySelector('.left-arrow');
+const nextButton = document.querySelector('.right-arrow');
+const dots = document.querySelectorAll('.circle');
+
+let position = 0;
+let dotIndex = 0;
+//functions for slider movement//
+
+const nextSlide = () => {
+  if (position < (dots.length - 1) * 475) {
+    position += 475;
+    dotIndex++
+    nextButton.style.opacity = 1; // Show nextButton
+  } else {
+    position = (dots.length - 1) * 475;
+    dotIndex = (dots.length - 1);
+    nextButton.style.opacity = 0; // Hide nextButton
+  }
+  sliderLine.style.left = -position + 'px';
+  thisSlide(dotIndex);
+
+  if (position > 0) {
+    prevButton.style.opacity = 1; // Show prevButton
+  }
+  thisSlide(dotIndex);
+
+  // change opacity of nextButton
+  if (position >= (dots.length - 1) * 475) {
+    nextButton.style.opacity = 0;
+  }
 }
 
-/* конфигурация */
-let width = 450; // ширина картинки
-let count = 3; // видимое количество изображений
+const prevSlide = () => {
+  if (position > 0) {
+    position -= 475;
+    dotIndex--
+    prevButton.style.opacity = 1; // Show prevButton
+  } else {
+    position = 0;
+    dotIndex = 0
+    prevButton.style.opacity = 0; // Hide prevButton
+  }
+  sliderLine.style.left = -position + 'px';
+  thisSlide(dotIndex);
 
-let list = document.querySelector('.slider-line');
-let listElems = document.querySelectorAll('.image-wrapper');
+  if (position < (dots.length - 1) * 475) {
+    nextButton.style.opacity = 1; // Show nextButton
+  }
+  thisSlide(dotIndex);
+  // change opacity of prevButton
+  if (position <= 0) {
+    prevButton.style.opacity = 0;
+  }
+}
+const thisSlide = (index) => {
+  for (let dot of dots) {
+    dot.classList.remove('active')
+  }
+  dots[index].classList.add('active')
+}
 
-let position = 0; // положение ленты прокрутки
+//event listeners
+nextButton.addEventListener('click', nextSlide)
+prevButton.addEventListener('click', prevSlide)
+
+//dots slider
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    position = 475 * index
+    sliderLine.style.left = -position + 'px'
+    dotIndex = index
+    thisSlide(dotIndex)
+  })
+})
 
 
-document.querySelector('.left-arrow').onclick = function () {
-  // сдвиг влево
-  position += width * count;
-  // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-  position = Math.min(position, 0)
-  list.style.marginLeft = position + 'px';
 
-};
+// -------------------------//
 
-document.querySelector('.right-arrow').onclick = function () {
-  // сдвиг вправо
-  position -= width * count;
-  // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-  position = Math.max(position, -width * (listElems.length - count));
-  list.style.marginLeft = position + 'px';
-};
+//section about: tabs for radio buttons
+const allBooksWrapper = document.querySelector('.favorites-items');
+const tabsBtn = document.querySelectorAll('.tabs__nav-btn');
+const tabsItems = document.querySelectorAll('.tabs__item');
+
+tabsBtn.forEach((item) => {
+  item.addEventListener('click', () => {
+    let currentBtn = item;
+    let tabId = currentBtn.getAttribute('data-tab')
+    let currentTab = document.querySelector(tabId)
+
+
+    tabsBtn.forEach((item) => {
+      item.classList.remove('active');
+    });
+
+    tabsItems.forEach((item) => {
+      item.classList.remove('active');
+    });
+
+    currentBtn.classList.add('active');
+    currentTab.classList.add('active');
+
+    //  Add the fade-out effect
+    //     allBooksWrapper.classList.add('fade');
+    //     setTimeout(() => {
+    //       // Remove the fade class after 1 second
+    //       allBooksWrapper.classList.remove('fade');
+    //     }, 3000);
+    //   });
+    // });
+
+    // Add the fade-out effect better effect
+
+    // Check if the fade class is already present
+    if (allBooksWrapper.classList.contains('fade')) {
+      // Remove the fade class and add it back after a short delay
+      allBooksWrapper.classList.remove('fade');
+      setTimeout(() => {
+        allBooksWrapper.classList.add('fade');
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        allBooksWrapper.classList.add('fade');
+      }, 10);
+    }
+  });
+});
+
+// Add the fade-in effect when the fade class is added back
+allBooksWrapper.addEventListener('transitionend', () => {
+  allBooksWrapper.classList.remove('fade');
+  image.style.display = 'flex';
+});
+
+
+
+
 
 

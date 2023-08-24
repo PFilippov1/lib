@@ -50,7 +50,29 @@
     </header>
     <main class="main">
         <section id="welcome">
-            <div class="overlay">
+<!-- -------------------------------------------modals windows -->
+
+<div class="drop-menu-profile__with-no-authorization">
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------ -->
+           <div class="overlay">
                 <div class="welcome">
                     <div class="welcome-bg">
                         <h2 class="welcome-text"><span>Welcome</span><span>to the Brooklyn Library</span></h2>
@@ -68,37 +90,9 @@
                 coffee
                 shop inside </p>
 
-            <!-- <div class="arrow__wrapper">
-                <div class="left-arrow"> <img src="/library/assets/img/icon/Carret_Left.svg" alt="left-arrow">
-                </div>
-
-                <div class="images-item">
-                    <div class="image-wrapper">
-
-                        <img src="../library/assets/img/image1.jpg" alt="image1">
-                    </div>
-                    <div class="image-wrapper">
-                        <img src="../library/assets/img/image2.jpg" alt="image2">
-                    </div>
-                    <div class="image-wrapper">
-                        <img src="../library/assets/img/image3.jpg" alt="image3">
-                    </div>
-                    <div class="image-wrapper">
-                        <img src="../library/assets/img/image4.jpg" alt="image4">
-                    </div>
-                    <div class="image-wrapper">
-                        <img src="../library/assets/img/image5.jpg" alt="image5">
-                    </div>
-
-                </div>
-                <div class="right-arrow"><img src="/library/assets/img/icon/Carret_Right.svg" alt="right-arrow">
-                </div>
-            </div> -->
-
             <div class="arrow__wrapper">
                 <div class="left-arrow"> <img src="/library/assets/img/icon/Carret_Left.svg" alt="left-arrow">
                 </div>
-
 
                 <div class="images-item">
                     <div class="slider-line">
@@ -120,46 +114,13 @@
                     </div>
                 </div>
 
-
                 <div class="right-arrow"><img src="/library/assets/img/icon/Carret_Right.svg" alt="right-arrow">
                 </div>
             </div>
 
-
-
-
-
-            <!-- <div class="carousel-pagination">
-                <div class="circle-wrapper">
-                    <div class="click-area"></div>
-                    <div class="circle-1"></div>
-                </div>
-
-                <div class="circle-wrapper">
-                    <div class="click-area"></div>
-                    <div class="circle-2"></div>
-                </div>
-
-                <div class="circle-wrapper">
-                    <div class="click-area"></div>
-                    <div class="circle-3"></div>
-                </div>
-
-                <div class="circle-wrapper">
-                    <div class="click-area"></div>
-                    <div class="circle-4"></div>
-                </div>
-
-                <div class="circle-wrapper">
-                    <div class="click-area"></div>
-                    <div class="circle-5"></div>
-                </div>
-            </div> -->
-
-
             <div class="carousel-pagination">
                 <div class="circle-wrapper">
-                    <div class="circle"></div>
+                    <div class="circle active"></div>
                 </div>
 
                 <div class="circle-wrapper">
@@ -179,8 +140,8 @@
                 </div>
             </div>
 
-
         </section>
+
         <section id="favorites">
             <div class="section-title">
                 <h2 class="title-text">Favorites</h2>
@@ -188,475 +149,485 @@
             </div>
             <p class="bold">Pick favorites of season</p>
 
-            <div class="radio-wrapper">
-                <div class="winter">
+            <div class="radio-wrapper ">
+                <div class="winter tabs__nav-btn active" data-tab="#tab_1">
                     <input checked type="radio" id="first-season" name="season" value="winter">
                     <label for="first-season">Winter</label>
                 </div>
-                <div class="spring">
+                <div class="spring tabs__nav-btn" data-tab="#tab_2">
                     <input type="radio" id="second-season" name="season" value="spring">
                     <label for="second-season">Spring</label>
                 </div>
-                <div class="summer">
+                <div class="summer tabs__nav-btn" data-tab="#tab_3">
                     <input type="radio" id="third-season" name="season" value="summer">
                     <label for="third-season">Summer</label>
                 </div>
-                <div class="autumn">
+                <div class="autumn tabs__nav-btn" data-tab="#tab_4">
                     <input type="radio" id="four-season" name="season" value="autumn">
                     <label for="four-season">Autumn</label>
                 </div>
             </div>
 
             <div class="favorites-items">
-                <div class="book-container book1">
-                    <div class="image-book-wrap">
-                        <div class="book-image first-book">
-                            <img src="./assets/img/book1.jpg" alt="first book img">
+
+                <div class="tabs__item active" id="tab_1">
+
+                    <div class="book-container book1">
+                        <div class="image-book-wrap">
+                            <div class="book-image first-book">
+                                <img src="./assets/img/book1.jpg" alt="first book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
+
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">The Book Eaters</p>
+                                <p class="author-name">By Sunyi Dean</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation first-book">An unusual sci-fi story about a book eater woman who
+                                    tries
+                                    desperately to save her dangerous mind-eater son from tradition and certain death.
+                                    Complete with dysfunctional family values, light Sapphic romance, and a strong,
+                                    complex
+                                    protagonist. Not for the faint of heart. </p>
+                            </div>
+                            <button type="button" class="button first-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
+                    <!-- 2222222222222222222 -->
+                    <div class="book-container book2">
+                        <div class="image-book-wrap">
+                            <div class="book-image second-book">
+                                <img src="./assets/img/book2.jpg" alt="second book img">
+                            </div>
                         </div>
+                        <div class="bg-description">
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">The Book Eaters</p>
-                            <p class="author-name">By Sunyi Dean</p>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Cackle</p>
+                                <p class="author-name">By Rachel Harrison</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation first-book">Are your Halloween movies of choice The Witches of
+                                    Eastwick
+                                    and Practical Magic? Look no further than here - where a woman recovering from a
+                                    breakup
+                                    moves to a quaint town in upstate New York and befriends a beautiful witch. </p>
+                            </div>
+                            <button type="button" class="button second-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation first-book">An unusual sci-fi story about a book eater woman who
-                                tries
-                                desperately to save her dangerous mind-eater son from tradition and certain death.
-                                Complete with dysfunctional family values, light Sapphic romance, and a strong,
-                                complex
-                                protagonist. Not for the faint of heart. </p>
+                    </div>
+
+                    <!-- 333333333 -->
+                    <div class="book-container book3">
+                        <div class="image-book-wrap">
+                            <div class="book-image third-book">
+                                <img src="./assets/img/book3.jpg" alt="third book img">
+                            </div>
                         </div>
-                        <button type="button" class="button first-button">Buy</button>
+                        <div class="bg-description">
+
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Dante: Poet of the Secular World</p>
+                                <p class="author-name">By Erich Auerbach</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation third-book">Auerbach's engaging book places the 'Comedy' within the
+                                    tradition of epic, tragedy, and philosophy in general, arguing for Dante's
+                                    uniqueness as
+                                    one who raised the individual and his drama of soul into something of divine
+                                    significance—an inspired introduction to Dante's main themes. </p>
+                            </div>
+                            <button type="button" class="button third-button">Buy</button>
+                        </div>
+                    </div>
+
+                    <!-- 44444444444444444444 -->
+                    <div class="book-container book4">
+                        <div class="image-book-wrap">
+                            <div class="book-image fourth-book">
+                                <img src="./assets/img/book4.jpg" alt="fourth book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
+
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">The Last Queen</p>
+                                <p class="author-name">By Clive Irving</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation fourth-book">A timely and revelatory new biography of Queen
+                                    Elizabeth
+                                    (and her family) exploring how the Windsors have evolved and thrived as the modern
+                                    world
+                                    has changed around them.</p>
+                            </div>
+                            <button disabled type="button" class="button fourth-button">Buy</button>
+                        </div>
                     </div>
                 </div>
-                <!-- 2222222222222222222 -->
-                <div class="book-container book2">
-                    <div class="image-book-wrap">
-                        <div class="book-image second-book">
-                            <img src="./assets/img/book2.jpg" alt="second book img">
-                        </div>
-                    </div>
-                    <div class="bg-description">
-
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
-
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Cackle</p>
-                            <p class="author-name">By Rachel Harrison</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation first-book">Are your Halloween movies of choice The Witches of
-                                Eastwick
-                                and Practical Magic? Look no further than here - where a woman recovering from a
-                                breakup
-                                moves to a quaint town in upstate New York and befriends a beautiful witch. </p>
-                        </div>
-                        <button type="button" class="button second-button">Buy</button>
-                    </div>
-                </div>
-
-                <!-- 333333333 -->
-                <div class="book-container book3">
-                    <div class="image-book-wrap">
-                        <div class="book-image third-book">
-                            <img src="./assets/img/book3.jpg" alt="third book img">
-                        </div>
-                    </div>
-                    <div class="bg-description">
-
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
-
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Dante: Poet of the Secular World</p>
-                            <p class="author-name">By Erich Auerbach</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation third-book">Auerbach's engaging book places the 'Comedy' within the
-                                tradition of epic, tragedy, and philosophy in general, arguing for Dante's
-                                uniqueness as
-                                one who raised the individual and his drama of soul into something of divine
-                                significance—an inspired introduction to Dante's main themes. </p>
-                        </div>
-                        <button type="button" class="button third-button">Buy</button>
-                    </div>
-                </div>
-
-                <!-- 44444444444444444444 -->
-                <div class="book-container book4">
-                    <div class="image-book-wrap">
-                        <div class="book-image fourth-book">
-                            <img src="./assets/img/book4.jpg" alt="fourth book img">
-                        </div>
-                    </div>
-                    <div class="bg-description">
-
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
-
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">The Last Queen</p>
-                            <p class="author-name">By Clive Irving</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation fourth-book">A timely and revelatory new biography of Queen
-                                Elizabeth
-                                (and her family) exploring how the Windsors have evolved and thrived as the modern
-                                world
-                                has changed around them.</p>
-                        </div>
-                        <button disabled type="button" class="button fourth-button">Own</button>
-                    </div>
-                </div>
-
                 <!-- 55555555555555555555555 -->
-                <div class="book-container book5">
-                    <div class="image-book-wrap">
-                        <div class="book-image fifth-book">
-                            <img src="./assets/img/book5.jpg" alt="fifth book img">
+                <div class="tabs__item" id="tab_2">
+                    <div class="book-container book5">
+                        <div class="image-book-wrap">
+                            <div class="book-image fifth-book">
+                                <img src="./assets/img/book5.jpg" alt="fifth book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
+
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">The Body</p>
+                                <p class="author-name">By Stephen King</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation fifth-book">This memoir about the author's relationship with gun
+                                    violence feels both expansive and intimate, resulting in a lyrical indictment of the
+                                    way
+                                    things are.</p>
+                            </div>
+                            <button type="button" class="button fifth-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
+                    <!-- 6666666666666666666 -->
+                    <div class="book-container book6">
+                        <div class="image-book-wrap">
+                            <div class="book-image six-book">
+                                <img src="./assets/img/book6.jpg" alt="six book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">The Body</p>
-                            <p class="author-name">By Stephen King</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation fifth-book">This memoir about the author's relationship with gun
-                                violence feels both expansive and intimate, resulting in a lyrical indictment of the
-                                way
-                                things are.</p>
-                        </div>
-                        <button type="button" class="button fifth-button">Buy</button>
-                    </div>
-                </div>
-                <!-- 6666666666666666666 -->
-                <div class="book-container book6">
-                    <div class="image-book-wrap">
-                        <div class="book-image six-book">
-                            <img src="./assets/img/book6.jpg" alt="six book img">
-                        </div>
-                    </div>
-                    <div class="bg-description">
-
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
-
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Carry: A Memoir of Survival on Stolen Land</p>
-                            <p class="author-name">By Toni Jenson</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation fifth-book">This memoir about the author's relationship with gun
-                                violence feels both expansive and intimate, resulting in a lyrical indictment of the
-                                way
-                                things are.</p>
-                        </div>
-                        <button type="button" class="button fifth-button">Buy</button>
-                    </div>
-                </div>
-                <!-- 77777777777777777 -->
-                <div class="book-container book7">
-                    <div class="image-book-wrap">
-                        <div class="book-image seven-book">
-                            <img src="./assets/img/book7.jpg" alt="seven book img">
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Carry: A Memoir of Survival on Stolen Land</p>
+                                <p class="author-name">By Toni Jenson</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation fifth-book">This memoir about the author's relationship with gun
+                                    violence feels both expansive and intimate, resulting in a lyrical indictment of the
+                                    way
+                                    things are.</p>
+                            </div>
+                            <button type="button" class="button fifth-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
+                    <!-- 77777777777777777 -->
+                    <div class="book-container book7">
+                        <div class="image-book-wrap">
+                            <div class="book-image seven-book">
+                                <img src="./assets/img/book7.jpg" alt="seven book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Days of Distraction</p>
-                            <p class="author-name">By Alexandra Chang</p>
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Days of Distraction</p>
+                                <p class="author-name">By Alexandra Chang</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation seven-book">A sardonic view of Silicon Valley culture, a meditation
+                                    on
+                                    race, and a journal of displacement and belonging, all in one form-defying package
+                                    of
+                                    spare prose.</p>
+                            </div>
+                            <button type="button" class="button seven-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation seven-book">A sardonic view of Silicon Valley culture, a meditation
-                                on
-                                race, and a journal of displacement and belonging, all in one form-defying package
-                                of
-                                spare prose.</p>
-                        </div>
-                        <button type="button" class="button seven-button">Buy</button>
                     </div>
-                </div>
-                <!-- 8888888888 -->
-                <div class="book-container book8">
-                    <div class="image-book-wrap">
-                        <div class="book-image eight-book">
-                            <img src="./assets/img/book8.jpg" alt="eight book img">
+                    <!-- 8888888888 -->
+                    <div class="book-container book8">
+                        <div class="image-book-wrap">
+                            <div class="book-image eight-book">
+                                <img src="./assets/img/book8.jpg" alt="eight book img">
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-description">
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Dominicana</p>
-                            <p class="author-name">By Angie Cruz</p>
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Dominicana</p>
+                                <p class="author-name">By Angie Cruz</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation eight-book">A fascinating story of a teenage girl who marries a man
+                                    twice her age with the promise to bring her to America. Her marriage is an
+                                    opportunity
+                                    for her family to eventually immigrate. For fans of Isabel Allende and Julia
+                                    Alvarez.
+                                </p>
+                            </div>
+                            <button type="button" class="button eight-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation eight-book">A fascinating story of a teenage girl who marries a man
-                                twice her age with the promise to bring her to America. Her marriage is an
-                                opportunity
-                                for her family to eventually immigrate. For fans of Isabel Allende and Julia
-                                Alvarez.
-                            </p>
-                        </div>
-                        <button type="button" class="button eight-button">Buy</button>
                     </div>
                 </div>
                 <!-- 9999999999999999 -->
-                <div class="book-container book9">
-                    <div class="image-book-wrap">
-                        <div class="book-image nine-book">
-                            <img src="./assets/img/book9.jpg" alt="nine book img">
+                <div class="tabs__item" id="tab_3">
+                    <div class="book-container book9">
+                        <div class="image-book-wrap">
+                            <div class="book-image nine-book">
+                                <img src="./assets/img/book9.jpg" alt="nine book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
+
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Crude: A Memoir</p>
+                                <p class="author-name">By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation nine-book">Drawing and color by Damien Roudeau | This book
+                                    illustrates
+                                    the struggles of a group of indigenous Ecuadoreans as they try to sue the
+                                    ChevronTexaco
+                                    company for damage their oil fields did to the Amazon and her people</p>
+                            </div>
+                            <button type="button" class="button nine-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
+                    <!-- 101010101010 -->
+                    <div class="book-container book10">
+                        <div class="image-book-wrap">
+                            <div class="book-image ten-book">
+                                <img src="./assets/img/book10.jpg" alt="ten book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Crude: A Memoir</p>
-                            <p class="author-name">By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation nine-book">Drawing and color by Damien Roudeau | This book
-                                illustrates
-                                the struggles of a group of indigenous Ecuadoreans as they try to sue the
-                                ChevronTexaco
-                                company for damage their oil fields did to the Amazon and her people</p>
-                        </div>
-                        <button type="button" class="button nine-button">Buy</button>
-                    </div>
-                </div>
-                <!-- 101010101010 -->
-                <div class="book-container book10">
-                    <div class="image-book-wrap">
-                        <div class="book-image ten-book">
-                            <img src="./assets/img/book10.jpg" alt="ten book img">
-                        </div>
-                    </div>
-                    <div class="bg-description">
-
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
-
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Let My People Go Surfing</p>
-                            <p class="author-name">By Yvon Chouinard</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation ten-book">Chouinard—climber, businessman, environmentalist—shares
-                                tales
-                                of courage and persistence from his experience of founding and leading Patagonia,
-                                Inc.
-                                Full title: Let My People Go Surfing: The Education of a Reluctant Businessman,
-                                Including 10 More Years of Business Unusual.</p>
-                        </div>
-                        <button type="button" class="button ten-button">Buy</button>
-                    </div>
-                </div>
-                <!-- 11 11 11 11 -->
-                <div class="book-container book11">
-                    <div class="image-book-wrap">
-                        <div class="book-image eleven-book">
-                            <img src="./assets/img/book11.jpg" alt="eleven book img">
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Let My People Go Surfing</p>
+                                <p class="author-name">By Yvon Chouinard</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation ten-book">Chouinard—climber, businessman, environmentalist—shares
+                                    tales
+                                    of courage and persistence from his experience of founding and leading Patagonia,
+                                    Inc.
+                                    Full title: Let My People Go Surfing: The Education of a Reluctant Businessman,
+                                    Including 10 More Years of Business Unusual.</p>
+                            </div>
+                            <button type="button" class="button ten-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
+                    <!-- 11 11 11 11 -->
+                    <div class="book-container book11">
+                        <div class="image-book-wrap">
+                            <div class="book-image eleven-book">
+                                <img src="./assets/img/book11.jpg" alt="eleven book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">The Octopus Museum: Poems</p>
-                            <p class="author-name">By Brenda Shaughnessy</p>
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">The Octopus Museum: Poems</p>
+                                <p class="author-name">By Brenda Shaughnessy</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation eleven-book">This collection of bold and scathingly beautiful
+                                    feminist
+                                    poems imagines what comes after our current age of environmental destruction,
+                                    racism,
+                                    sexism, and divisive politics.</p>
+                            </div>
+                            <button type="button" class="button eleven-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation eleven-book">This collection of bold and scathingly beautiful
-                                feminist
-                                poems imagines what comes after our current age of environmental destruction,
-                                racism,
-                                sexism, and divisive politics.</p>
-                        </div>
-                        <button type="button" class="button eleven-button">Buy</button>
                     </div>
-                </div>
-                <!-- 12 12 12 12  -->
-                <div class="book-container book12">
-                    <div class="image-book-wrap">
-                        <div class="book-image twelve-book">
-                            <img src="./assets/img/book12.jpg" alt="twelve book img">
+                    <!-- 12 12 12 12  -->
+                    <div class="book-container book12">
+                        <div class="image-book-wrap">
+                            <div class="book-image twelve-book">
+                                <img src="./assets/img/book12.jpg" alt="twelve book img">
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-description">
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Shark Dialogues: A Novel</p>
-                            <p class="author-name">By Kiana Davenport</p>
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Shark Dialogues: A Novel</p>
+                                <p class="author-name">By Kiana Davenport</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation twelve-book">An epic saga of seven generations of one family
+                                    encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four
+                                    granddaughters together in an erotic tale of villains and dreamers, queens and
+                                    revolutionaries, lepers and healers..</p>
+                            </div>
+                            <button type="button" class="button twelve-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation twelve-book">An epic saga of seven generations of one family
-                                encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four
-                                granddaughters together in an erotic tale of villains and dreamers, queens and
-                                revolutionaries, lepers and healers..</p>
-                        </div>
-                        <button type="button" class="button twelve-button">Buy</button>
                     </div>
                 </div>
                 <!-- 13 13 13 13 13 -->
-                <div class="book-container book13">
-                    <div class="image-book-wrap">
-                        <div class="book-image thirteen-book">
-                            <img src="./assets/img/book13.jpg" alt="thirteen book img">
+                <div class="tabs__item" id="tab_4">
+                    <div class="book-container book13">
+                        <div class="image-book-wrap">
+                            <div class="book-image thirteen-book">
+                                <img src="./assets/img/book13.jpg" alt="thirteen book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
+
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
+
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Casual Conversation</p>
+                                <p class="author-name">By Renia White</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation thirteen-book">White's impressive debut collection takes readers
+                                    through and beyond the concepts of conversation and the casual - both what we say to
+                                    each other and what we don't, examining the possibilities around how we construct
+                                    and
+                                    communicate identity.</p>
+                            </div>
+                            <button type="button" class="button thirteen-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
+                    <!-- 14 14 14 14 -->
+                    <div class="book-container book14">
+                        <div class="image-book-wrap">
+                            <div class="book-image fourteen-book">
+                                <img src="./assets/img/book14.jpg" alt="fourteen book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Casual Conversation</p>
-                            <p class="author-name">By Renia White</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation thirteen-book">White's impressive debut collection takes readers
-                                through and beyond the concepts of conversation and the casual - both what we say to
-                                each other and what we don't, examining the possibilities around how we construct
-                                and
-                                communicate identity.</p>
-                        </div>
-                        <button type="button" class="button thirteen-button">Buy</button>
-                    </div>
-                </div>
-                <!-- 14 14 14 14 -->
-                <div class="book-container book14">
-                    <div class="image-book-wrap">
-                        <div class="book-image fourteen-book">
-                            <img src="./assets/img/book14.jpg" alt="fourteen book img">
-                        </div>
-                    </div>
-                    <div class="bg-description">
-
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
-
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">The Great Fire</p>
-                            <p class="author-name">By Lou Ureneck</p>
-                        </div>
-                        <div class="annotation">
-                            <p class="annotation fourteen-book">The harrowing story of an ordinary American and a
-                                principled Naval officer who, horrified by the burning of Smyrna, led an
-                                extraordinary
-                                rescue effort that saved a quarter of a million refugees from the Armenian Genocide
-                            </p>
-                        </div>
-                        <button type="button" class="button fourteen-button">Buy</button>
-                    </div>
-                </div>
-                <!-- 15 15 15 15  -->
-                <div class="book-container book15">
-                    <div class="image-book-wrap">
-                        <div class="book-image fifteen-book">
-                            <img src="./assets/img/book15.jpg" alt="fifteen book img">
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">The Great Fire</p>
+                                <p class="author-name">By Lou Ureneck</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation fourteen-book">The harrowing story of an ordinary American and a
+                                    principled Naval officer who, horrified by the burning of Smyrna, led an
+                                    extraordinary
+                                    rescue effort that saved a quarter of a million refugees from the Armenian Genocide
+                                </p>
+                            </div>
+                            <button type="button" class="button fourteen-button">Buy</button>
                         </div>
                     </div>
-                    <div class="bg-description">
+                    <!-- 15 15 15 15  -->
+                    <div class="book-container book15">
+                        <div class="image-book-wrap">
+                            <div class="book-image fifteen-book">
+                                <img src="./assets/img/book15.jpg" alt="fifteen book img">
+                            </div>
+                        </div>
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Rickey: The Life and Legend</p>
-                            <p class="author-name">By Howard Bryant</p>
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Rickey: The Life and Legend</p>
+                                <p class="author-name">By Howard Bryant</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation fifteen-book">With the fall rolling around, one can't help but
+                                    think of
+                                    baseball's postseason coming up! And what better way to prepare for it than reading
+                                    the
+                                    biography of one of the game's all-time greatest performers, the Man of Steal,
+                                    Rickey
+                                    Henderson?</p>
+                            </div>
+                            <button type="button" class="button fifteen-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation fifteen-book">With the fall rolling around, one can't help but
-                                think of
-                                baseball's postseason coming up! And what better way to prepare for it than reading
-                                the
-                                biography of one of the game's all-time greatest performers, the Man of Steal,
-                                Rickey
-                                Henderson?</p>
-                        </div>
-                        <button type="button" class="button fifteen-button">Buy</button>
                     </div>
-                </div>
-                <!-- 16 16 16 16 16 -->
-                <div class="book-container book16">
-                    <div class="image-book-wrap">
-                        <div class="book-image sixteen-book">
-                            <img src="./assets/img/book16.jpg" alt="sixteen book img">
+                    <!-- 16 16 16 16 16 -->
+                    <div class="book-container book16">
+                        <div class="image-book-wrap">
+                            <div class="book-image sixteen-book">
+                                <img src="./assets/img/book16.jpg" alt="sixteen book img">
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-description">
+                        <div class="bg-description">
 
-                        <div class="staff-pick">
-                            <p class="text-book">Staff Picks</p>
-                        </div>
+                            <div class="staff-pick">
+                                <p class="text-book">Staff Picks</p>
+                            </div>
 
-                        <div class="underline-staff-pick"></div>
-                        <div class="author-title">
-                            <p class="book-name">Slug: And Other Stories</p>
-                            <p class="author-name">By Megan Milks</p>
+                            <div class="underline-staff-pick"></div>
+                            <div class="author-title">
+                                <p class="book-name">Slug: And Other Stories</p>
+                                <p class="author-name">By Megan Milks</p>
+                            </div>
+                            <div class="annotation">
+                                <p class="annotation sixteen-book">Exes Tegan and Sara find themselves chained together
+                                    by
+                                    hairballs of codependency. A father and child experience the shared trauma of giving
+                                    birth to gods from their wounds.</p>
+                            </div>
+                            <button type="button" class="button sixteen-button">Buy</button>
                         </div>
-                        <div class="annotation">
-                            <p class="annotation sixteen-book">Exes Tegan and Sara find themselves chained together
-                                by
-                                hairballs of codependency. A father and child experience the shared trauma of giving
-                                birth to gods from their wounds.</p>
-                        </div>
-                        <button type="button" class="button sixteen-button">Buy</button>
                     </div>
                 </div>
             </div>
