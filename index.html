@@ -27,9 +27,33 @@
                     </ul>
                 </nav>
                 <div class="icon-burger-wrapper">
+
+
                     <div class="profile-icon">
                         <img src="./assets/img/icon/icon_profile.svg" alt="icon-profile">
+                        <!-- -------------------------------------------drop windows -->
+
+                        <div class="drop-menu__no-authorization">
+                            <div class="drop-menu-profile">Profile
+                                <div class="line__drop-menu"></div>
+                            </div>
+                            <span class="drop-menu__login">Log In</span>
+                            <span class="drop-menu__register">Register</span>
+                        </div>
+
                     </div>
+                    <div class="profile-icon__authorized" title="This is a profile icon">
+                        <img src="../library/assets/img/icon/Subtract.svg" alt="profile-icon">
+                        <div class="drop-menu__with-authorization">
+                            <div class="drop-menu-profile">Profile
+                                <div class="line__drop-menu"></div>
+                            </div>
+                            <span class="drop-menu__my-profile">My profile</span>
+                            <span class="drop-menu__logout">Log Out</span>
+                        </div>
+                        <div class="text-icon__authorized">JW</div>
+                    </div>
+                    <!-- ------------------------------------ -->
                     <div class="tablet__nav__menu">
                         <ul class="nav__list__tablet">
                             <li class="nav__item__tablet"><a href="#about" class="nav-link">About</a></li>
@@ -50,29 +74,166 @@
     </header>
     <main class="main">
         <section id="welcome">
-<!-- -------------------------------------------modals windows -->
-
-<div class="drop-menu-profile__with-no-authorization">
-    
-</div>
 
 
 
+            <!-- ------------modal login------------------ -->
+            <div class="modal__login">
+                <div class="modal-content">
+                    <h4 class="login-title">Login</h4>
+                    <div class="login-form__wrapper">
+                        <form class="login__form" action="#">
+                            <label for="email-or-card">E-mail or readers card</label>
+                            <input type="text" id="email-or-card" name="email-or-card" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required minlength="8">
+                            <button type="submit">Log In</button>
+                        </form>
+                    </div>
+                    <div class="after-login__form__text-wrapper">
+                        <span class="after-form">Don’t have an account?</span> <span
+                            class="to-register-form">Register</span>
+                    </div>
+                    <span class="close-modal-btn"><img src="../library/assets/img/icon/close_btn.svg"
+                            alt="close-btn"></span>
+                </div>
+            </div>
+
+            <!-- ------------modal register-------------------->
+
+            <div class="modal__register">
+                <div class="modal-register-content">
+                    <h4 class="register__title">Register</h4>
+                    <div class="register-form__wrapper">
+                        <form class="register__form" action="#">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" name="first-name" required>
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname" name="last-name" required>
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" required>
+                            <label for="pass">Password:</label>
+                            <input type="password" id="pass" name="pass" required required minlength="8">
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="after-login__form__text-wrapper">
+                        <span class="after-form">Already have an account?</span> <span
+                            class="to-login-form">Login</span>
+                    </div>
+                    <span class="close-modal-btn"><img src="../library/assets/img/icon/close_btn.svg"
+                            alt="close-btn"></span>
+                </div>
+            </div>
+
+
+            <!-- ------------modal profile-------------------->
+
+            <div class="modal__profile">
+                <div class="modal-profile-content">
+                    <div class="bg">
+                        <div class="name-and-avatar">
+                            <span class="user-name__first-letters">JW</span>
+                        </div>
+                        <span class="profile-user-name">John Wick</span>
+                    </div>
+
+                    <div class="profile-information">
+                        <h4 class="profile__title">My profile</h4>
+                        <div class="cards-profile__wrapper">
+                            <div class="container-info">
+                                <span class="info-title">visits</span>
+                                <span class="icon-wrapper"><img src="..//library/assets/img/icon/Union.svg"
+                                        alt="visits-icon"></span>
+                                <span class="visits">111</span>
+                            </div>
+                            <div class="container-info">
+                                <span class="info-title">bonuses</span>
+                                <span class="icon-wrapper"><img src="..//library/assets/img/icon/Star1.svg"
+                                        alt="bonuses-icon"></span>
+                                <span class="bonuses">222</span>
+                            </div>
+                            <div class="container-info">
+                                <span class="info-title">Books</span>
+                                <span class="icon-wrapper"><img src="..//library/assets/img/icon/book.svg"
+                                        alt="books-icon"></span>
+                                <span class="books">333</span>
+                            </div>
+                        </div>
+
+                        <div class="rented-book__wrapper">
+                            <div class="rented-books">Rented books</div>
+                            <div class="book-input">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                                voluptas placeat rem quibusdam tempora eos esse accusamus. Adipisci voluptate corrupti,
+                                maiores aut ea dolore iure autem. Animi voluptas illum quasi?</div>
+                        </div>
+
+                        <div class="prifile-card__wrapper">
+                            <span class="prifile-card-title">Card number</span>
+                            <span class="prifile-card-number">111222</span>
+                            <span class="prifile-card-icon"><img src="../library/assets/img/icon/icon_copy.svg"
+                                    alt="icon-copy"></span>
+                        </div>
+
+                        <span class="close-modal-btn"><img src="../library/assets/img/icon/close_btn.svg"
+                                alt="close-btn"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------ modal buy a card -->
+
+
+            <div class="modal__buy-library-card">
+                <div class="modal-buy-library-card__content ">
+                    <div class="buy-library-card-title__wrapper">
+                        <h4 class="buy-library-card__title">Buy a library card</h4>
+                    </div>
+                    <div class="form-text__wrapper">
+                        <div class="buy-library-card-form__wrapper">
+                            <form class="buy-library-card__form" action="#">
+                                <label for="cardnumber">Bank card number</label>
+                                <input type="text" id="cardnumber" name="card-number" required>
+                                <label for="month-year-code">Expiration code</label>
+                                <input type="number" id="month-year-code" name="month" required>
+                                <input type="number" id="year-code" name="year" required>
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" name="cvc" required minlength="3" maxlength="3">
+                                <label for="cardholdername">Cardholder name</label>
+                                <input type="text" id="cardholdername" name="card-holder-name" required>
+                                <label for="postalcode">Postal code</label>
+                                <input type="text" id="postalcode" name="postal-code" required>
+                                <label for="citytown">City / Town</label>
+                                <input type="text" id="citytown" name="city-town" required>
+                                <button type="submit">Buy</button>
+                            </form>
+                            <div class="after-buy-library-card__form-price-text">
+                                <span class="card-price">$ 25.00</span>
+                            </div>
+                        </div>
+                        <div class="buy-library-card-text__wrapper">
+                            <span class="buy-library-card-text">
+                                If you are live, work, attend school, or pay property taxes in New York State, you can
+                                get a
+                                $25 digital library card right now using this online form. Visitors to New York State
+                                can
+                                also use this form to apply for a temporary card.
+
+                            </span>
+                        </div>
+
+                        <span class="close-modal-btn buy-library-card__close"><img
+                                src="../library/assets/img/icon/close_btn_white.svg" alt="close-btn"></span>
+                    </div>
+                </div>
+            </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- ------------------------------------------------------ -->
-           <div class="overlay">
+            <!-- ------------------------------------------------------ -->
+            <div class="overlay">
                 <div class="welcome">
                     <div class="welcome-bg">
                         <h2 class="welcome-text"><span>Welcome</span><span>to the Brooklyn Library</span></h2>
@@ -91,7 +252,7 @@
                 shop inside </p>
 
             <div class="arrow__wrapper">
-                <div class="left-arrow"> <img src="/library/assets/img/icon/Carret_Left.svg" alt="left-arrow">
+                <div class="left-arrow"> <img src="../library/assets/img/icon/Carret_Left.svg" alt="left-arrow">
                 </div>
 
                 <div class="images-item">
@@ -114,7 +275,7 @@
                     </div>
                 </div>
 
-                <div class="right-arrow"><img src="/library/assets/img/icon/Carret_Right.svg" alt="right-arrow">
+                <div class="right-arrow"><img src="../library/assets/img/icon/Carret_Right.svg" alt="right-arrow">
                 </div>
             </div>
 
@@ -171,7 +332,7 @@
             <div class="favorites-items">
 
                 <div class="tabs__item active" id="tab_1">
-
+                    <!-- 11111111111111111111 -->
                     <div class="book-container book1">
                         <div class="image-book-wrap">
                             <div class="book-image first-book">
@@ -197,7 +358,7 @@
                                     complex
                                     protagonist. Not for the faint of heart. </p>
                             </div>
-                            <button type="button" class="button first-button">Buy</button>
+                            <button type="button" class="button btn1">Buy</button>
                         </div>
                     </div>
 
@@ -226,7 +387,7 @@
                                     breakup
                                     moves to a quaint town in upstate New York and befriends a beautiful witch. </p>
                             </div>
-                            <button type="button" class="button second-button">Buy</button>
+                            <button type="button" class="button btn2">Buy</button>
                         </div>
                     </div>
 
@@ -255,7 +416,7 @@
                                     one who raised the individual and his drama of soul into something of divine
                                     significance—an inspired introduction to Dante's main themes. </p>
                             </div>
-                            <button type="button" class="button third-button">Buy</button>
+                            <button type="button" class="button btn3">Buy</button>
                         </div>
                     </div>
 
@@ -284,7 +445,7 @@
                                     world
                                     has changed around them.</p>
                             </div>
-                            <button disabled type="button" class="button fourth-button">Buy</button>
+                            <button type="button" class="button btn4">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -313,7 +474,7 @@
                                     way
                                     things are.</p>
                             </div>
-                            <button type="button" class="button fifth-button">Buy</button>
+                            <button type="button" class="button btn5">Buy</button>
                         </div>
                     </div>
                     <!-- 6666666666666666666 -->
@@ -340,7 +501,7 @@
                                     way
                                     things are.</p>
                             </div>
-                            <button type="button" class="button fifth-button">Buy</button>
+                            <button type="button" class="button btn6">Buy</button>
                         </div>
                     </div>
                     <!-- 77777777777777777 -->
@@ -368,7 +529,7 @@
                                     of
                                     spare prose.</p>
                             </div>
-                            <button type="button" class="button seven-button">Buy</button>
+                            <button type="button" class="button btn7">Buy</button>
                         </div>
                     </div>
                     <!-- 8888888888 -->
@@ -397,7 +558,7 @@
                                     Alvarez.
                                 </p>
                             </div>
-                            <button type="button" class="button eight-button">Buy</button>
+                            <button type="button" class="button btn8">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -427,7 +588,7 @@
                                     ChevronTexaco
                                     company for damage their oil fields did to the Amazon and her people</p>
                             </div>
-                            <button type="button" class="button nine-button">Buy</button>
+                            <button type="button" class="button btn9">Buy</button>
                         </div>
                     </div>
                     <!-- 101010101010 -->
@@ -456,7 +617,7 @@
                                     Full title: Let My People Go Surfing: The Education of a Reluctant Businessman,
                                     Including 10 More Years of Business Unusual.</p>
                             </div>
-                            <button type="button" class="button ten-button">Buy</button>
+                            <button type="button" class="button btn10">Buy</button>
                         </div>
                     </div>
                     <!-- 11 11 11 11 -->
@@ -484,7 +645,7 @@
                                     racism,
                                     sexism, and divisive politics.</p>
                             </div>
-                            <button type="button" class="button eleven-button">Buy</button>
+                            <button type="button" class="button btn11">Buy</button>
                         </div>
                     </div>
                     <!-- 12 12 12 12  -->
@@ -511,7 +672,7 @@
                                     granddaughters together in an erotic tale of villains and dreamers, queens and
                                     revolutionaries, lepers and healers..</p>
                             </div>
-                            <button type="button" class="button twelve-button">Buy</button>
+                            <button type="button" class="button btn12">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -541,7 +702,7 @@
                                     and
                                     communicate identity.</p>
                             </div>
-                            <button type="button" class="button thirteen-button">Buy</button>
+                            <button type="button" class="button btn13">Buy</button>
                         </div>
                     </div>
                     <!-- 14 14 14 14 -->
@@ -569,7 +730,7 @@
                                     rescue effort that saved a quarter of a million refugees from the Armenian Genocide
                                 </p>
                             </div>
-                            <button type="button" class="button fourteen-button">Buy</button>
+                            <button type="button" class="button btn14">Buy</button>
                         </div>
                     </div>
                     <!-- 15 15 15 15  -->
@@ -599,7 +760,7 @@
                                     Rickey
                                     Henderson?</p>
                             </div>
-                            <button type="button" class="button fifteen-button">Buy</button>
+                            <button type="button" class="button btn15">Buy</button>
                         </div>
                     </div>
                     <!-- 16 16 16 16 16 -->
@@ -626,7 +787,7 @@
                                     hairballs of codependency. A father and child experience the shared trauma of giving
                                     birth to gods from their wounds.</p>
                             </div>
-                            <button type="button" class="button sixteen-button">Buy</button>
+                            <button type="button" class="button btn16">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -739,38 +900,127 @@
                 </div>
             </div>
         </section>
-        <section id="library-card-section">
-            <div class="library-alingment-div">
-                <h2 class="title-text">Digital Library Cards</h2>
-                <div class="section-title-underline"></div>
-            </div>
-            <div class="library-card-container">
-                <div class="library-card">
-                    <p class="find-form-describing">Find your Library card</p>
-                    <div class="form-wraper">
-                        <div class="form-wraper-background">
-                            <p class="name-library">Brooklyn Public Library</p>
-                            <form id="library-card-form" action="#" method="POST">
-                                <input class="input-name" type="text" name="name" value="" placeholder="Reader's name"
-                                    required pattern="[a-zA-Z0-9-]+">
-                                <input class="input-card-number" type="text" name="card-number" value=""
-                                    placeholder="Card number" required pattern="[0-9-]+">
-                            </form>
+
+
+
+        <section id="library-card">
+
+            <div class="library-card__wrapper">
+
+                <div class="library-alingment-div">
+                    <h2 class="title-text">Digital Library Cards</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+                <div class="library-card-container">
+                    <div class="library-card">
+                        <p class="find-form-describing">Find your Library card</p>
+                        <div class="form-wraper">
+                            <div class="form-wraper-background">
+                                <p class="name-library">Brooklyn Public Library</p>
+                                <form id="library-card-form" action="#">
+                                    <input class="input-name" type="text" name="name" value=""
+                                        placeholder="Reader's name" required>
+                                    <!-- //pattern="[a-zA-Z0-9-]+"///////////// -->
+                                    <input class="input-card-number" type="text" name="card-number" value=""
+                                        placeholder="Card number" required>
+                                </form>
+                            </div>
+                            <button class="library-submit-button" type="submit" form="library-card-form">Check the
+                                card</button>
+
+                            <div class="cards-profile__wrapper show-info-registrated-user">
+                                <div class="container-info">
+                                    <span class="info-title">visits</span>
+                                    <span class="icon-wrapper"><img src="..//library/assets/img/icon/Union.svg"
+                                            alt="visits-icon"></span>
+                                    <span class="visits">111</span>
+                                </div>
+                                <div class="container-info">
+                                    <span class="info-title">bonuses</span>
+                                    <span class="icon-wrapper"><img src="..//library/assets/img/icon/Star1.svg"
+                                            alt="bonuses-icon"></span>
+                                    <span class="bonuses">222</span>
+                                </div>
+                                <div class="container-info">
+                                    <span class="info-title">Books</span>
+                                    <span class="icon-wrapper"><img src="..//library/assets/img/icon/book.svg"
+                                            alt="books-icon"></span>
+                                    <span class="books">333</span>
+                                </div>
+                            </div>
+
+
                         </div>
-                        <button class="library-submit-button" type="submit" form="library-card-form">Check the
-                            card</button>
                     </div>
-                </div>
-                <div class="get-card">
-                    <p class="get-reader-card-text">Get a reader card</p>
-                    <p class="get-reader-card-text-describe">You will be able to see a reader card after logging into
-                        account or you can register a new account</p>
-                    <div class="buttons-container">
-                        <button class="sign-up">Sign Up</button>
-                        <button class="log-in">Log in</button>
+                    <div class="get-card">
+                        <p class="get-reader-card-text">Get a reader card</p>
+                        <p class="get-reader-card-text-describe">You will be able to see a reader card after logging
+                            into
+                            account or you can register a new account</p>
+                        <div class="buttons-container">
+                            <button class="sign-up">Sign Up</button>
+                            <button class="log-in">Log in</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+            <div class="digital-library-card__after-registration">
+
+                <div class="library-alingment-div">
+                    <h2 class="title-text">Digital Library Cards</h2>
+                    <div class="section-title-underline"></div>
+                </div>
+                <div class="library-card-container">
+                    <div class="library-card">
+                        <p class="find-form-describing">Your your Library card</p>
+                        <div class="form-wraper">
+                            <div class="form-wraper-background">
+                                <p class="name-library">Brooklyn Public Library</p>
+                                <form id="library-card-form__after-registration" action="#">
+                                    <input class="input-name holder-name" type="text" name="name" value=""
+                                        placeholder="Reader's name">
+                                    <input class="input-card-number holder-card" type="text" name="card-number" value=""
+                                        placeholder="Card number">
+                                </form>
+                            </div>
+                            <div class="cards-profile__wrapper">
+                                <div class="container-info">
+                                    <span class="info-title">visits</span>
+                                    <span class="icon-wrapper"><img src="..//library/assets/img/icon/Union.svg"
+                                            alt="visits-icon"></span>
+                                    <span class="visits">111</span>
+                                </div>
+                                <div class="container-info">
+                                    <span class="info-title">bonuses</span>
+                                    <span class="icon-wrapper"><img src="..//library/assets/img/icon/Star1.svg"
+                                            alt="bonuses-icon"></span>
+                                    <span class="bonuses">222</span>
+                                </div>
+                                <div class="container-info">
+                                    <span class="info-title">Books</span>
+                                    <span class="icon-wrapper"><img src="..//library/assets/img/icon/book.svg"
+                                            alt="books-icon"></span>
+                                    <span class="books">333</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="get-card">
+                        <p class="get-reader-card-text">Visit your profile</p>
+                        <p class="get-reader-card-text-describe">With a digital library card you get free access to the
+                            Library’s wide array of digital resources including e-books, databases, educational
+                            resources, and more.</p>
+                        <div class="button-to-profile__wrapper">
+                            <button class="button-to-profile">Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+
         </section>
     </main>
 
@@ -783,7 +1033,6 @@
                 <p class="days1">Mon - Fri</p>
                 <p class="days2"> 08:00 am - 07:00 pm</p>
             </div>
-
         </div>
 
         <div class="social-day-container">
